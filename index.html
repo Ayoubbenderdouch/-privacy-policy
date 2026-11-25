@@ -56,7 +56,7 @@
   <h3>3. Publicités (Google AdMob)</h3>
   <p>L’application affiche des annonces fournies par Google AdMob (Google Mobile Ads SDK). Pour diffuser et mesurer ces annonces et pour prévenir la fraude, le SDK de Google collecte et transmet à Google :</p>
   <ul>
-    <li>des identifiants de l’appareil : sur Android, l’identifiant publicitaire et l’identifiant App Set ; sur iPhone et iPad, des identifiants propres à l’application ou au développeur. L’application ne demande pas l’autorisation de suivi d’Apple ; l’identifiant publicitaire d’iOS n’est donc pas utilisé ;</li>
+    <li>des identifiants de l’appareil : sur Android, l’identifiant publicitaire et l’identifiant App Set ; sur iPhone et iPad, des identifiants propres à l’application ou au développeur, et l’identifiant publicitaire d’Apple (IDFA) seulement si vous autorisez le suivi lorsque l’application vous le demande (voir section 6) ;</li>
     <li>l’adresse IP, qui permet d’estimer une localisation approximative ;</li>
     <li>les interactions avec l’application et les annonces (lancements, appuis, vues) ;</li>
     <li>des données de diagnostic et de performance (temps de lancement, plantages, consommation d’énergie).</li>
@@ -70,7 +70,7 @@
   <p>L’application utilise Google Analytics for Firebase pour mesurer son utilisation (nombre d’utilisateurs, versions, ouvertures des notifications) et pour adresser les notifications aux utilisateurs de l’application. Le SDK de Google collecte un identifiant d’instance de l’application, des événements d’utilisation (premier lancement, sessions, ouverture des notifications), des informations sur l’appareil et le système, et une localisation approximative déduite de l’adresse IP. Il n’utilise pas l’identifiant publicitaire d’Apple (IDFA). Sur Android, il peut utiliser l’identifiant publicitaire (voir section 3). Ces données ne servent pas à vous identifier. Politique de Google : <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
 
   <h3>6. Consentement et choix</h3>
-  <p>Dans l’Espace économique européen, au Royaume-Uni et en Suisse, l’application affiche le formulaire de consentement de Google avant toute demande d’annonce. Vous pouvez modifier vos choix à tout moment dans l’application : bouton d’informations en haut de l’écran › « Confidentialité des annonces ». Sur Android, vous pouvez aussi réinitialiser ou supprimer l’identifiant publicitaire dans les réglages du téléphone.</p>
+  <p>Dans l’Espace économique européen, au Royaume-Uni et en Suisse, l’application affiche le formulaire de consentement de Google avant toute demande d’annonce. Vous pouvez modifier vos choix à tout moment dans l’application : bouton d’informations en haut de l’écran › « Confidentialité des annonces ». Sur iPhone et iPad, l’application vous demande, avant la première annonce, si elle peut vous suivre (question de suivi d’Apple) ; vous pouvez changer ce choix à tout moment dans les Réglages de l’appareil. Sur Android, vous pouvez aussi réinitialiser ou supprimer l’identifiant publicitaire dans les réglages du téléphone.</p>
 
   <h3>7. Enfants</h3>
   <p>L’application ne s’adresse pas aux enfants de moins de 13 ans.</p>
@@ -106,7 +106,7 @@
   <h3>3. الإعلانات (Google AdMob)</h3>
   <p>يعرض التطبيق إعلانات من Google AdMob (مكتبة Google Mobile Ads). لعرض هذه الإعلانات وقياسها ومنع الاحتيال، تجمع مكتبة جوجل وترسل إلى جوجل ما يلي:</p>
   <ul>
-    <li>معرّفات الجهاز: على أندرويد معرّف الإعلانات ومعرّف App Set، وعلى آيفون وآيباد معرّفات خاصة بالتطبيق أو بالمطوّر. لا يطلب التطبيق إذن التتبّع من آبل، لذلك لا يُستعمل معرّف الإعلانات في iOS؛</li>
+    <li>معرّفات الجهاز: على أندرويد معرّف الإعلانات ومعرّف App Set، وعلى آيفون وآيباد معرّفات خاصة بالتطبيق أو بالمطوّر، ومعرّف آبل الإعلاني (IDFA) فقط إذا سمحتَ بالتتبّع حين يسألك التطبيق (انظر القسم 6)؛</li>
     <li>عنوان IP، ويمكن أن يُقدَّر منه موقع تقريبي؛</li>
     <li>التفاعل مع التطبيق والإعلانات (فتح التطبيق، اللمسات، المشاهدات)؛</li>
     <li>بيانات التشخيص والأداء (زمن الفتح، الأعطال، استهلاك الطاقة).</li>
@@ -120,7 +120,7 @@
   <p>يستخدم التطبيق Google Analytics for Firebase لقياس استخدامه (عدد المستخدمين، الإصدارات، فتح الإشعارات) ولتوجيه الإشعارات إلى مستخدمي التطبيق. تجمع مكتبة جوجل معرّف نسخة التطبيق المثبّتة، وأحداث الاستخدام (أول تشغيل، الجلسات، فتح الإشعارات)، ومعلومات عن الجهاز والنظام، وموقعاً تقريبياً مستنتجاً من عنوان IP. لا تستخدم معرّف آبل الإعلاني (IDFA). على أندرويد قد تستخدم المعرّف الإعلاني (انظر القسم 3). لا تُستخدم هذه البيانات للتعرّف على هويتك. سياسة جوجل: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
 
   <h3>6. الموافقة والاختيارات</h3>
-  <p>في المنطقة الاقتصادية الأوروبية والمملكة المتحدة وسويسرا يعرض التطبيق نموذج موافقة جوجل قبل أي طلب إعلان. يمكنك تغيير اختياراتك في أي وقت داخل التطبيق: زر المعلومات أعلى الشاشة › «خصوصية الإعلانات». وعلى أندرويد يمكنك أيضاً إعادة ضبط معرّف الإعلانات أو حذفه من إعدادات الهاتف.</p>
+  <p>في المنطقة الاقتصادية الأوروبية والمملكة المتحدة وسويسرا يعرض التطبيق نموذج موافقة جوجل قبل أي طلب إعلان. يمكنك تغيير اختياراتك في أي وقت داخل التطبيق: زر المعلومات أعلى الشاشة › «خصوصية الإعلانات». وعلى آيفون وآيباد يسألك التطبيق قبل أول إعلان هل يسمح له بتتبّعك (سؤال التتبّع من آبل)، ويمكنك تغيير هذا الاختيار في أي وقت من إعدادات الجهاز. وعلى أندرويد يمكنك أيضاً إعادة ضبط معرّف الإعلانات أو حذفه من إعدادات الهاتف.</p>
 
   <h3>7. الأطفال</h3>
   <p>التطبيق غير موجّه للأطفال دون 13 سنة.</p>
@@ -156,7 +156,7 @@
   <h3>3. Advertising (Google AdMob)</h3>
   <p>The app shows ads served by Google AdMob (Google Mobile Ads SDK). To serve and measure these ads and to prevent fraud, Google’s SDK collects and sends to Google:</p>
   <ul>
-    <li>device identifiers: on Android, the advertising ID and the App Set ID; on iPhone and iPad, app- or developer-scoped identifiers. The app does not ask for Apple’s tracking permission, so the iOS advertising identifier is not used;</li>
+    <li>device identifiers: on Android, the advertising ID and the App Set ID; on iPhone and iPad, app- or developer-scoped identifiers, and Apple’s advertising identifier (IDFA) only if you allow tracking when the app asks (see section 6);</li>
     <li>the IP address, from which an approximate location can be estimated;</li>
     <li>interactions with the app and the ads (launches, taps, views);</li>
     <li>diagnostic and performance data (launch time, crashes, energy use).</li>
@@ -170,7 +170,7 @@
   <p>The app uses Google Analytics for Firebase to measure how it is used (number of users, versions, notification opens) and to address notifications to the app’s users. Google’s SDK collects an app instance ID, usage events (first launch, sessions, notification opens), device and system information, and an approximate location derived from the IP address. It does not use Apple’s advertising identifier (IDFA). On Android it may use the advertising ID (see section 3). This data is not used to identify you. Google’s policy: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
 
   <h3>6. Consent and choices</h3>
-  <p>In the European Economic Area, the United Kingdom and Switzerland, the app shows Google’s consent form before any ad request. You can change your choices at any time in the app: the information button at the top of the screen › “Ad privacy”. On Android you can also reset or delete the advertising ID in the phone’s settings.</p>
+  <p>In the European Economic Area, the United Kingdom and Switzerland, the app shows Google’s consent form before any ad request. You can change your choices at any time in the app: the information button at the top of the screen › “Ad privacy”. On iPhone and iPad, the app asks before the first ad whether it may track you (Apple’s tracking prompt); you can change this choice at any time in the device’s Settings. On Android you can also reset or delete the advertising ID in the phone’s settings.</p>
 
   <h3>7. Children</h3>
   <p>The app is not directed to children under 13.</p>
